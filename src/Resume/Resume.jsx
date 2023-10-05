@@ -1,66 +1,43 @@
-import React from 'react'
+import React from "react";
+import Skill from "./Components/Skill";
+import resumeData from "./resumeData";
+import Education from "./Components/Education";
+import Interest from "./Components/interest";
+import Experience from "./Components/Experience";
+import "./resume.css";
 
-function Resume({experience,education,skills}) {
+function Resume() {
+  const { experience, education, skills, interest, personalDetail } =
+    resumeData;
   return (
-   
-      <>
-  
-  <div id="header" />
-  <div className="left" />
-  <div className="stuff">
-    <br />
-    <br />
-    <h1>Resume</h1>
-    <h2>Emily</h2>
-    <hr />
-    <br />
-    <p className="head">Interests</p>
-    <ul>
-      <li>Drawing</li>
-      <li>Photography</li>
-      <li>Design</li>
-      <li>Programming</li>
-      <li>Computer Science</li>
-    </ul>
-    <p className="head">Skills</p>
-    <ul>
-    { skills.map(sk=>{
-    return <li>{sk}</li>
-   })}
-      
-    </ul>
-    <p className="head">Education</p>
-    <ul>
-      <a href="http://www.wiltonhighschool.org/pages/Wilton_High_School">
-        <li>Wilton High School</li>
-      </a>
-      {/*Link*/}
-      <a href="https://www.silvermineart.org/">
-        <li>Silvermine School of Arts</li>
-      </a>
-      <li>Codeacademy</li>
-    </ul>
-    <p className="head">Experience</p>
-    <ul>
-      <li>Student Technology Intern for Wilton School District</li>
-      <li>Babysitter</li>
-      
-    </ul>
-    <p className="head">Extracurriculars</p>
-    <ul>
-      <li>Recycling Club</li>
-      <li>Gardening Club</li>
-      <li>Book Club</li>
-    </ul>
-  </div>
-  <div className="right" />
-  <div id="footer">
-    <h2 id="name">Emily</h2>
-  </div>
-</>
+    <>
+      <div className="stuff">
+        <br />
+        <br />
+        <h1>Resume</h1>
+        <h2>{personalDetail}</h2>
+        <hr />
+        <br />
+        <Border border="solid black 1px">
+          <Interest interest={interest}></Interest>
+        </Border>
 
-    
-  )
+        <Border border="solid red 2px">
+          <Skill skills={skills}></Skill>
+        </Border>
+        <Border border="solid green 2px">
+          <Education education={education}></Education>
+        </Border>
+
+        <Border border="solid brown 2px">
+          <Experience experience={experience}></Experience>
+        </Border>
+      </div>
+    </>
+  );
 }
+const Border = ({ children, border }) => {
+  return <div style={{ border }}>{children}</div>;
+};
 
-export default Resume
+export default Resume;

@@ -5,11 +5,7 @@ import "./App.css";
 
 function App() {
   const channel = "RakeshYt";
-  const resume = {
-    experience: [{ year: 2012, company: "xyz", role: "something" }],
-    education: [],
-    skills: ["react js", "node js","Django"],
-  };
+ 
 
   return (
     <div>
@@ -17,7 +13,7 @@ function App() {
         <Thumb></Thumb>   
       </Video> */}
 
-      <Resume {...resume}></Resume>
+      <Resume ></Resume>
     </div>
   );
 }
