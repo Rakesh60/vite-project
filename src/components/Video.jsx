@@ -1,33 +1,25 @@
-import React from 'react'
-import './Video.css'
+import React from "react";
+import "./Video.css";
 
-function Video(props) {
-    
-    console.log(props)
+function Video({ title,id, views, channel="Coder Dost", time,verified,children }) {
   return (
-    
-    <>   
-      <div>
-       {props.children}
+    <>
+        <div className='container'>
+      <div className="pic">
+      <img src={`https://picsum.photos/id/${id}/160/90`} alt="Katherine Johnson" />
       </div>
-
-      </>
-  
-  )
+      <div className="title">{title}</div>
+      <div className="channel">{channel} {verified && '✅'} </div>
+      <div className="views">
+        {views} views <span>.</span> {time}
+      </div>
+      </div>
+    </>
+  );
 }
-
-
 
 function Thumb() {
-  return (
-    <div>
-        Thumbnail
-      
-    </div>
-  )
+  return <div>Thumbnail I am Childern Prop</div>;
 }
 
-
-
-
-export  {Video,Thumb}
+export { Video, Thumb };
