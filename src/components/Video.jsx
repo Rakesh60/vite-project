@@ -13,6 +13,7 @@ function Video({ title,id, views, channel="Coder Dost", time,verified,children }
       <div className="views">
         {views} views <span>.</span> {time}
       </div>
+      {children}
       </div>
     </>
   );

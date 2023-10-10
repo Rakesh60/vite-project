@@ -1,17 +1,15 @@
 import React from "react";
 import { Video, Thumb } from "./components/Video";
+import PlayButton from "./components/PlayButton";
 import Resume from "./Resume/Resume";
-import videos from './data/data'
+import videos from "./data/data";
 import "./App.css";
 
 function App() {
-
- 
-
   return (
-    <div>
-       {
-        videos.map(video=><Video
+    <div className="App" onClick={()=>{console.log('App')}}>
+      {videos.map((video) => (
+        <Video
           key={video.id}
           title={video.title}
           views={video.views}
@@ -19,9 +17,25 @@ function App() {
           channel={video.channel}
           verified={video.verified}
           id={video.id}
-        ></Video>)
-      }
-
+        >
+          <PlayButton
+            message="Play-Message"
+            onPlay={() => {
+              console.log("Playing",video.title);
+            }}
+            onPause={() => {
+              console.log("Paused",video.title);
+            }}
+          >
+           {video.title}
+          </PlayButton>
+        </Video>
+      ))}
+      {/* <div style={{clear:"both"}}>
+        {" "}
+        <PlayButton  message='Play-Message' onPlay={()=>{console.log('Play')}} onPause={()=>{console.log('Pause')}}>PLAY</PlayButton>
+  
+      </div> */}
       {/* <Resume ></Resume> */}
     </div>
   );

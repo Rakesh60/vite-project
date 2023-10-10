@@ -3,27 +3,27 @@ const videos = [{
     title: 'React JS tutorial',
     views: '999K',
     time: '1 year ago',
-    channel: 'Coder Dost',
+    channel: 'Kumar Coder',
     verified: true
   },{
     id:2,  
     title: 'Node JS tutorial',
     views: '100K',
     time: '1 year ago',
-    channel: 'Coder Dost',
+    channel: 'Kumar Coder',
     verified: false
   },
   { id:3,
     title: 'React JS tutorial',
     views: '1M',
     time: '1 month ago',
-    channel: 'Coder Dost',
+    channel: 'Kumar Coder',
     verified: true
   }, { id:4,
     title: 'React Master Class tutorial',
     views: '1.5M',
     time: '2 month ago',
-    channel: 'Coder Dost',
+    channel: 'Kumar Coder',
     verified: true
   }];
  

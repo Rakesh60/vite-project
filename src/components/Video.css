@@ -14,12 +14,12 @@
   .title{
     font-weight: bold;
     margin-bottom: 1em;
-    color: rgb(48, 37, 17);
+    color: rgb(255, 255, 255);
 
   }
   .channel, .views{
     font-size: small;
-    color:#b63d3d;
+    color:#ffffff;
     margin-bottom: 0.2em;
   }
   
