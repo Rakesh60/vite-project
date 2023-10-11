@@ -4,6 +4,7 @@ import PlayButton from "./components/PlayButton";
 import Resume from "./Resume/Resume";
 import videos from "./data/data";
 import "./App.css";
+import Counter from "./components/Counter";
 
 function App() {
   return (
@@ -37,6 +38,10 @@ function App() {
   
       </div> */}
       {/* <Resume ></Resume> */}
+
+      <div >
+      <Counter></Counter>
+      </div>
     </div>
   );
 }
