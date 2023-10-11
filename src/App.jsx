@@ -8,7 +8,13 @@ import Counter from "./components/Counter";
 
 function App() {
   return (
-    <div className="App" onClick={()=>{console.log('App')}}>
+    <div
+      className="App"
+      onClick={() => {
+        console.log("App");
+      }}
+    >
+      <Counter></Counter>
       {videos.map((video) => (
         <Video
           key={video.id}
@@ -22,13 +28,13 @@ function App() {
           <PlayButton
             message="Play-Message"
             onPlay={() => {
-              console.log("Playing",video.title);
+              console.log("Playing", video.title);
             }}
             onPause={() => {
-              console.log("Paused",video.title);
+              console.log("Paused", video.title);
             }}
           >
-           {video.title}
+            {video.title}
           </PlayButton>
         </Video>
       ))}
@@ -38,10 +44,6 @@ function App() {
   
       </div> */}
       {/* <Resume ></Resume> */}
-
-      <div >
-      <Counter></Counter>
-      </div>
     </div>
   );
 }

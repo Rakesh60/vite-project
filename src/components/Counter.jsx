@@ -1,32 +1,30 @@
-import React from 'react'
-import { useState } from 'react'
+import React from "react";
+import { useState } from "react";
 
 function Counter() {
-    // const [number, setnumber] = useState(0)
-    var fruit = useState('banana'); 
-    let fname=fruit[0];
-    let setfname=fruit[1]
-  
-    
-        // Returns a pair
-    function handelClick(e){
-        e.stopPropagation()
-        // setnumber(number+1)
-        // console.log(number)
-        console.log(setfname)
-        console.log(fname)
-    }
+  const [number, setnumber] = useState(0);
+  console.log(number);
 
+  function onKlick(e) {
+    e.stopPropagation();
+    setnumber((number) => number + 1);
+  }
+  function handelClick(e) {
+    e.stopPropagation();
+    if (number > 0) {
+      setnumber((number) => number - 1);
+    } else {
+      setnumber(0);
+    }
+  }
 
   return (
     <div>
-        
-      
-      <button onClick={handelClick}>Add</button>
-      {/* <h1 style={{color:'white',fontSize:'30px'}} >{number}</h1> */}
-      <h1 style={{color:'white',fontSize:'30px'}}>{fname}</h1>
+      <button onClick={onKlick}>Add</button>
+      <h1 style={{ color: "white", fontSize: "30px" }}>{number}</h1>
+      <button onClick={handelClick}>Minus</button>
     </div>
-  )
+  );
 }
 
-export default Counter
+export default Counter;
