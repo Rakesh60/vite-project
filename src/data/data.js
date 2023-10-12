@@ -20,7 +20,7 @@ const videos = [{
     channel: 'Kumar Coder',
     verified: true
   }, { id:4,
-    title: 'React Master Class tutorial',
+    title: 'Mongo Db',
     views: '1.5M',
     time: '2 month ago',
     channel: 'Kumar Coder',
