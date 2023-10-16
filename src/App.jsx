@@ -9,7 +9,7 @@ import Counter from "./components/Counter";
 function App() {
   const [videos,setVideos]=useState(videosDb)
   return (
-    <><button onClick={()=>{
+    <><button className="styled" onClick={()=>{
    
       setVideos(  [...videos,{id:videos.length+1,
         title: 'New Added',
