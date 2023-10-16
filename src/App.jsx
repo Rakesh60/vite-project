@@ -5,11 +5,17 @@ import Resume from "./Resume/Resume";
 import videosDb from "./data/data";
 import "./App.css";
 import Counter from "./components/Counter";
+import AddVideo from "./components/AddVideo";
 
 function App() {
-  const [videos,setVideos]=useState(videosDb)
+  const [videos, setVideos] = useState(videosDb);
+  function addVideos(video) {
+    setVideos([...videos, { ...video, id: videos.length + 1 }]);
+  }
   return (
-    <><button className="styled" onClick={()=>{
+    <>
+      <AddVideo addVideos={addVideos}></AddVideo>
+      {/* <button className="styled" onClick={()=>{
    
       setVideos(  [...videos,{id:videos.length+1,
         title: 'New Added',
@@ -17,42 +23,42 @@ function App() {
         time: '2 month ago',
         channel: 'Kumar Coder',
         verified: true}])
-     }}>Add Videos</button>
-    <div
-      className="App"
-      onClick={() => {
-        console.log("App");
-      }}
-    >
-     
-      {/* <Counter></Counter> */}
-      {videos.map((video) => (
-        <Video
-          key={video.id}
-          title={video.title}
-          views={video.views}
-          time={video.time}
-          channel={video.channel}
-          verified={video.verified}
-          id={video.id}
-        >
-          <PlayButton
-            message="Play-Message"
-            onPlay={() => {
-              console.log("Playing", video.title);
-            }}
-            onPause={() => {
-              console.log("Paused", video.title);
-            }}
+     }}>Add Videos</button> */}
+      <div
+        className="App"
+        onClick={() => {
+          console.log("App");
+        }}
+      >
+        {/* <Counter></Counter> */}
+        {videos.map((video) => (
+          <Video
+            key={video.id}
+            title={video.title}
+            views={video.views}
+            time={video.time}
+            channel={video.channel}
+            verified={video.verified}
+            id={video.id}
           >
-            {video.title}
-          </PlayButton>
-        </Video>
-      ))}
-     
-      {/* <Resume ></Resume> */}
-    </div>
-    </>);
+            <PlayButton
+              message="Play-Message"
+              onPlay={() => {
+                console.log("Playing", video.title);
+              }}
+              onPause={() => {
+                console.log("Paused", video.title);
+              }}
+            >
+              {video.title}
+            </PlayButton>
+          </Video>
+        ))}
+
+        {/* <Resume ></Resume> */}
+      </div>
+    </>
+  );
 }
 
 export default App;
