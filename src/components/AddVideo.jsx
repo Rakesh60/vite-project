@@ -41,25 +41,7 @@ function AddVideo({ addVideos }) {
           onChange={handleChange}
           value={video.views}
         />
-        <button
-          onClick={handleSubmit}
-          // className="styled"
-          // onClick={() => {
-          //   setVideos([
-          //     ...videos,
-          //     {
-          //       id: videos.length + 1,
-          //       title: "New Added",
-          //       views: "1.5M",
-          //       time: "2 month ago",
-          //       channel: "Kumar Coder",
-          //       verified: true,
-          //     },
-          //   ]);
-          // }}
-        >
-          Add Videos
-        </button>
+        <button onClick={handleSubmit}>Add Videos</button>
       </form>
     </div>
   );
