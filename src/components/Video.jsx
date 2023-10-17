@@ -5,6 +5,7 @@ function Video({ title,id, views, channel="Coder Dost", time,verified,children }
   return (
     <>
         <div className='container'>
+          {/* <button className="close" onClick={deleteVideo} >X</button> */}
       <div className="pic">
       <img src={`https://picsum.photos/id/${id}/160/90`} alt="Katherine Johnson" />
       </div>
@@ -19,8 +20,6 @@ function Video({ title,id, views, channel="Coder Dost", time,verified,children }
   );
 }
 
-function Thumb() {
-  return <div>Thumbnail I am Childern Prop</div>;
-}
 
-export { Video, Thumb };
+
+export default Video

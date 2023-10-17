@@ -19,12 +19,6 @@ const videos = [{
     time: '1 month ago',
     channel: 'Kumar Coder',
     verified: true
-  }, { id:4,
-    title: 'Mongo Db',
-    views: '1.5M',
-    time: '2 month ago',
-    channel: 'Kumar Coder',
-    verified: true
   }];
  
 
