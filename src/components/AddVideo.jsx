@@ -10,11 +10,7 @@ function AddVideo({ addVideos }) {
     title: "",
     views: "",
   };
-  const [video, setVideo] = useState({
-    time: "2 month ago",
-    channel: "Kumar Coder",
-    verified: true,
-  });
+  const [video, setVideo] = useState(initialState);
   function handleSubmit(e) {
     e.preventDefault();
     addVideos(video);
